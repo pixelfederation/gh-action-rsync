@@ -1,0 +1,46 @@
+name: Kubectl get replicas
+description: Get replicas from k8s deployment
+author: Tomas Hulata <thulata@pixelfederation.com>
+runs:
+  using: node12
+  main: main.js
+inputs:
+  directory:
+    description: Working directory
+    required: false
+    default: "."
+  user:
+    required: false
+    default: jenkins
+  parameters:
+    required: false
+    default: r
+  exclude:
+    required: false
+  origin:
+    required: true
+  destinations:
+    required: true
+  delete:
+    required: false
+    default: false
+  verbose:
+    required: false
+    default: false
+  compression-level:
+    required: false
+    default: -1
+  ssh-opts:
+    required: false
+    default: |
+      StrictHostKeyChecking=no
+  ssh-params:
+    required: false
+  ssh-proxy-cmd:
+    required: false
+  create-dst-dir:
+    required: false
+    default: false
+  dry-run: 
+    required: false
+    default: false

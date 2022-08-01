@@ -1,0 +1,38 @@
+name: Local devel workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Rsync test
+        id: rsync-test
+        uses: ./
+        with:
+          directory: tests
+          dry-run: false
+          verbose: true
+          origin: src1/
+          exclude: |
+            wtf
+            resource
+          destinations: |
+            192.168.0.17:/home/jenkins/bla/dst4/
+          delete: true
+          create-dst-dir: true
+          ssh-params: |
+            -p 1022
+
+
