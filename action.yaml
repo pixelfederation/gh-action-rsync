@@ -1,5 +1,5 @@
-name: Kubectl get replicas
-description: Get replicas from k8s deployment
+name: Rsync action
+description: Rsync from src to multiple destinations
 author: Tomas Hulata <thulata@pixelfederation.com>
 runs:
   using: node12
