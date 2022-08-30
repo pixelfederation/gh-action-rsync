@@ -8,7 +8,7 @@ export async function getCommonInputs(): Promise<ICommonInputs> {
     result.user = core.getInput('user', { required: false });
     result.parameters = core.getInput('parameters', { required: false });
     result.exclude = core.getMultilineInput('exclude', { required: false });
-    result.origin = core.getInput('origin', { required: true });
+    result.source = core.getInput('source', { required: true });
     result.destinations = core.getMultilineInput('destinations', { required: true });
     result.delete = core.getBooleanInput('delete', { required: false });
     result.verbose = core.getBooleanInput('verbose', { required: false });

@@ -17,6 +17,7 @@
     "@actions/exec": "1.0.4",
     "@actions/github": "4.0.0",
     "@actions/io": "1.0.2",
+    "action-docs": "^1.0.4",
     "yaml": "^2.1.1"
   },
   "devDependencies": {

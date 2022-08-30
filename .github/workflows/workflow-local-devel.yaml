@@ -24,7 +24,7 @@ jobs:
           directory: tests
           dry-run: false
           verbose: true
-          origin: src1/
+          source: src1/
           exclude: |
             wtf
             resource

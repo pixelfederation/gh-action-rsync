@@ -2566,7 +2566,7 @@ async function getCommonInputs() {
   result.user = core.getInput("user", {required: false});
   result.parameters = core.getInput("parameters", {required: false});
   result.exclude = core.getMultilineInput("exclude", {required: false});
-  result.origin = core.getInput("origin", {required: true});
+  result.source = core.getInput("source", {required: true});
   result.destinations = core.getMultilineInput("destinations", {required: true});
   result.delete = core.getBooleanInput("delete", {required: false});
   result.verbose = core.getBooleanInput("verbose", {required: false});
@@ -2632,7 +2632,7 @@ async function rsyncDirs() {
       ci.dryrun ? "--dry-run" : ""
     ].filter(Boolean);
     rsyncArgs = rsyncArgs.concat(shortArgs);
-    rsyncArgs = rsyncArgs.concat([ci.origin, destination]);
+    rsyncArgs = rsyncArgs.concat([ci.source, destination]);
     promises.push(rsync(rsyncArgs));
   }
   await Promise.all(promises);

@@ -10,7 +10,7 @@ Rsync from src to dst
 | user | rsync user | `false` | jenkins |
 | parameters | rsync params | `false` | r |
 | exclude | rsync exclude dirs | `false` |  |
-| origin | origin dir | `true` |  |
+| source | source dir | `true` |  |
 | destinations | multiline destinations | `true` |  |
 | delete | whether to delete dst out of sync | `false` | false |
 | verbose | | `false` | false |
@@ -31,7 +31,7 @@ Rsync from src to dst
           directory: tests
           dry-run: false
           verbose: true
-          origin: src/
+          source: src/
           exclude: |
             wtf
             resource

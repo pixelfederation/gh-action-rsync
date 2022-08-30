@@ -17,7 +17,7 @@ inputs:
     default: r
   exclude:
     required: false
-  origin:
+  source:
     required: true
   destinations:
     required: true

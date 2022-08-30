@@ -16,9 +16,9 @@ export interface ICommonInputs {
      */
     exclude: string[];
     /**
-     * Origin directory
+     * Source directory
      */
-    origin: string;
+    source: string;
     /**
      * Destinations directories
      */

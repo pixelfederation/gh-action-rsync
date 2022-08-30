@@ -43,7 +43,7 @@ export async function rsyncDirs(): Promise<void> {
     
     rsyncArgs = rsyncArgs.concat(shortArgs);
 
-    rsyncArgs = rsyncArgs.concat([ci.origin, destination]);
+    rsyncArgs = rsyncArgs.concat([ci.source, destination]);
 
     promises.push(rsync(rsyncArgs));
   }
