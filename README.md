@@ -21,6 +21,17 @@ Rsync from src to dst
 | create-dst-dir | create dst dir first | `false` | false |
 | dry-run | | `false` | false |
 
+## SSH user private key load
+
+Use this action to laod ssh private key [webfactory/ssh-agent](https://github.com/webfactory/ssh-agent).
+
+```yaml
+      - name: Load ssh key
+        uses: webfactory/ssh-agent@v0.5.4
+        with:
+            ssh-private-key: ${{ steps.secrets.outputs.jenkins_ssh_private_key }}
+```
+
 ## Run
 
 ```yaml
