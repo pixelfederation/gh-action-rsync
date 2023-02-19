@@ -13,10 +13,10 @@
     "build": "esbuild src/rsync/main.ts --bundle --outdir=. --target=node12 --platform=node"
   },
   "dependencies": {
-    "@actions/core": "1.8.2",
-    "@actions/exec": "1.0.4",
-    "@actions/github": "4.0.0",
-    "@actions/io": "1.0.2",
+    "@actions/core": "1.10.0",
+    "@actions/exec": "1.1.1",
+    "@actions/github": "5.1.1",
+    "@actions/io": "1.1.2",
     "action-docs": "^1.0.4",
     "yaml": "^2.1.1"
   },
