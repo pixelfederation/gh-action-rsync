@@ -2,7 +2,7 @@ name: Rsync action
 description: Rsync from src to multiple destinations
 author: Tomas Hulata <thulata@pixelfederation.com>
 runs:
-  using: node16
+  using: node20
   main: main.js
 inputs:
   directory:
