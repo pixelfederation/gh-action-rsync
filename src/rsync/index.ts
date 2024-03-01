@@ -45,7 +45,7 @@ export async function rsyncDirs(): Promise<void> {
       ]);
     }
     rsyncArgs = rsyncArgs.concat(
-      ci.exclude.map((ex: string) => `--exclude=${ex.trim()}`)
+      ci.exclude.map((ex: string) => `--exclude=${ex.trim()}`),
     );
 
     let shortArgs: string[] = [
