@@ -19956,7 +19956,7 @@ async function rsyncDirs() {
       "--compress-level",
       ci.compressionLevel,
       "-z"
-    ].concat(["-e"]).concat(sshOpts);
+    ].concat(["-e"]).concat([sshOptsString]);
     let dstHost = "";
     let dstDir = "";
     if (destination.includes(":")) {

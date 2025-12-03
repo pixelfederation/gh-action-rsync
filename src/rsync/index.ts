@@ -24,7 +24,7 @@ export async function rsyncDirs(): Promise<void> {
       "-z",
     ]
       .concat(["-e"])
-      .concat(sshOpts);
+      .concat([sshOptsString]);
     let dstHost: string = "";
     let dstDir: string = "";
 
