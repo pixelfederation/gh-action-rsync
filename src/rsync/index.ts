@@ -13,7 +13,8 @@ export async function rsyncDirs(): Promise<void> {
       sshOpts = sshOpts.concat(["-o", '"', "ProxyCommand", sshProxyCmd, '"']);
     }
     sshOpts = sshOpts.concat(["'"]);
-    const sshOptsString: string = sshOpts.join(" ");
+    let sshOptsString: string = sshOpts.join(" ");
+    sshOptsString = sshOptsString.replace("' ", "'").replace(" '", "'") //tmp fix
 
     let rsyncArgs: string[] = [
       "rsync",
